@@ -1,0 +1,40 @@
+<div class="dashboard-page">
+  <div class="dashboard-header">
+    <h1>Manage Your Users</h1>
+  </div>
+
+  <div class="user-form">
+    <h2>Add New User</h2>
+    <form (ngSubmit)="createUser()">
+      <input
+        type="text"
+        placeholder="Full Name"
+        [(ngModel)]="newUser.name"
+        name="name"
+        required
+      />
+      <input
+        type="number"
+        placeholder="Age"
+        [(ngModel)]="newUser.age"
+        name="age"
+        required
+      />
+      <button type="submit">Add User</button>
+    </form>
+  </div>
+
+  <div class="user-list">
+    <h2>User List</h2>
+    <div *ngFor="let user of users" class="user-card">
+      <div class="user-info">
+        <p>Name: {{ user.name }}</p>
+        <p>Age: {{ user.age }}</p>
+      </div>
+      <div class="user-actions">
+        <button (click)="updateUser(user)">Edit</button>
+        <button (click)="deleteUser(user.id)" class="delete">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

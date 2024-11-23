@@ -1,0 +1,50 @@
+/* Navigation Bar Styling */
+nav {
+  background-color: #28a745; /* Changed to a green shade */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #f8f9fa; /* Soft off-white */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #218838; /* Darker green for hover */
+  color: #ffffff;
+}
+
+nav a.active {
+  background-color: #155724; /* Even darker green for active link */
+  font-weight: bold;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 8px 0;
+  }
+}
